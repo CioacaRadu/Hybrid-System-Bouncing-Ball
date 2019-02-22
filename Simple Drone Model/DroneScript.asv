@@ -1,0 +1,33 @@
+clear all
+close all
+clc
+
+
+SetPoint = 30;
+
+sim('DroneControl')
+
+
+t = tout;
+x = alt.Data;
+
+xl = [-1 1]
+yl = [30 30]
+
+
+for i = 1:length(t)
+
+    
+
+    plot(1,1);
+    
+    
+    hold on
+    plot(0,x(i),'Or','Markersize',15) ;
+     xlim([-1, 1]);
+    ylim([0, 150]);
+    hold off
+    drawnow
+    
+    
+end
